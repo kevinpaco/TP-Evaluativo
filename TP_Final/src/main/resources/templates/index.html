@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+       <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+		<script src="/webjars/jquery/3.6.0/jquery.min.js" type="text/javascript"> </script>
+		<script src="/webjars/popper.js/2.9.3/umd/popper.min.js" type="text/javascript"> </script>
+		<script src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js" type="text/javascript"> </script>  
+       <meta charset="utf-8">
+       <title>inicio</title>
+       <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"> 
+</head>
+<body id="body1"> 
+
+    
+     
+     <div class="container" id="caja1">
+            <div id="boton2">
+                <p>Si tiene cuenta</p>
+            <a  class="btn btn-primary" th:href="@{/empleo/logging}">Ingresar </a>
+           </div>
+           <div id="boton1">
+              <p>Registrarse Como </p>
+             <a  class="btn btn-primary" th:href="@{/usuario/formulario}">Usuario </a>
+             <a  class="btn btn-primary" th:href="@{/empleador/formulario}">Empleador </a> 
+           </div>
+          
+     </div>
+    
+     
+</body>
+</html >

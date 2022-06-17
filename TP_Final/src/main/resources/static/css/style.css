@@ -1,0 +1,68 @@
+body#body1{
+	
+		background-image: url("../image/56652803_279902039595336_5378678327504535552_n.png");
+}
+div#boton1{
+	margin:auto;
+	margin-top:50px;
+    text-align: center;
+}
+div#boton2{
+	margin:auto;
+	margin-top: 50px;
+    text-align: center;
+}
+div#caja1{ 
+	margin:auto;
+	margin-top: 32px;
+	
+	width:400px;
+	height:500px;
+	background-color: hsla(0.25turn, 100%, 50%, 0.5);
+	background-position: 200px 250px;
+	border-radius: 15px;
+	}
+.container1{
+	margin:auto;
+	width: 100%;
+	max-width: 1200px;
+	height:450px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+div#tarjeta{
+	
+	margin:20px;
+	margin-top: 40px;
+	width: 18rem;
+	
+}
+div#caja2{ 
+	margin:auto;
+	margin-top: 32px;
+	
+	width:400px;
+	height:500px;
+
+
+	border-radius: 15px;
+	}
+div#caja3{ 
+	margin:auto;
+	margin-top: 32px;
+	width:400px;
+	height:500px;
+	border-radius: 15px;
+	
+
+	}
+div#caja4{ 
+	margin:auto;
+	margin-top: 32px;
+	width:400px;
+	height:500px;
+	border-radius: 15px;
+	
+
+	}
