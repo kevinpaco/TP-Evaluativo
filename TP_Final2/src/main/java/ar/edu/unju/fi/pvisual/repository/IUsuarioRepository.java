@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import ar.edu.unju.fi.pvisual.model.Usuarios;
 
-public interface IUsuarioDAO extends JpaRepository<Usuarios, Long>{
+public interface IUsuarioRepository extends JpaRepository<Usuarios, Long>{
       
 	@Query("from Usuarios e order by e.provincia")
 	public List<Usuarios> obtenerUsuarios();

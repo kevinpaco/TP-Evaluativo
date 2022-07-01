@@ -15,10 +15,10 @@
        <div class="col-3" th:each="dato:${datos}" id="tarjeta">
          <div class="card" >
             
-           <h6>Cantidad de bacantes: <p th:text="${dato.cantidadVacantes}"> </p></h6>
-            <h6>Puesto Requeriodo: <p th:text="${dato.puestorequerido}"> </p></h6>
-            <h6>Resumen de Puesto: <p th:text="${dato.resumenPuesto}"> </p></h6>
-            <h6>Disponibilidad Horaria: <p th:text="${dato.disponHoraria}"> </p></h6>
+           <p th:text="'Cantidad de Vacantes: '+${dato.cantidadVacantes}"> </p>
+           <p th:text="'Puesto Requerido: '+${dato.puestorequerido}"> </p>
+           <p th:text="'Reesumen de Puesto: '+${dato.resumenPuesto}"> </p>
+           <p th:text="'Disponibilidad Horaria: '+${dato.disponHoraria}"> </p>
            
          </div>
        </div> 

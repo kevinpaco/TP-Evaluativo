@@ -1,5 +1,7 @@
 package ar.edu.unju.fi.pvisual.service.imp;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,12 @@ public class EmpleadorServiceImp implements IEmpleadorService{
 	public void guardarEmpleador(Empleadores empleador) {
 		// TODO Auto-generated method stub
 		empleadorRepository.save(empleador);
+	}
+
+	@Override
+	public List<Empleadores> obternerEmplador() {
+		// TODO Auto-generated method stub
+		return empleadorRepository.obtenerEmpleador();
 	}
 
 }

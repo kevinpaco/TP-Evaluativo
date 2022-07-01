@@ -54,6 +54,13 @@ public class EmpleadorController {
     	   logger.info("El envio del formulario fue un exito");
     	   return mav;}
      }
+    
+    @GetMapping("/mostrarEmp")
+    public String VerDatosEmpleador(Model model)
+    {
+    	model.addAttribute("datosEmp", empleadorService.obternerEmplador());
+    	return "Ver_datos_empleador";
+    }
      
 	/*@PostMapping("/guardar")
 	public String guadarEmpleador(@Valid @ModelAttribute("datos")Empleadores datos,BindingResult result, Model model) {

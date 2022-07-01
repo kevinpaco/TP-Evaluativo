@@ -24,9 +24,18 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = "empleadores")
 public class Empleadores {
-    @Id
+    
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CUIT")
+	private Long id;
+	
+    public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	@Column(name = "CUIT")
 	 private Long cuit;
     
     @Column(name = "CONTRASEÑA")
@@ -71,7 +80,7 @@ public class Empleadores {
     @NotEmpty(message="Debe ingresar una Descripsion")
 	private String descripcion;
     
-    @OneToMany(mappedBy = "empleador", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "empleador2", cascade = CascadeType.ALL)
     private List<OfertasLaborales> ofertas = new ArrayList<OfertasLaborales>();
     
 	public Empleadores() {
@@ -163,7 +172,7 @@ public class Empleadores {
 		return ofertas;
 	}
 	public void setOfertas(List<OfertasLaborales> offertas) {
-		this.ofertas = ofertas;
+		this.ofertas = offertas;
 	}
 	
 	

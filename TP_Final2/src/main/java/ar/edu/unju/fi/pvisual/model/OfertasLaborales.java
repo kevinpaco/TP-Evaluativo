@@ -57,9 +57,9 @@ public class OfertasLaborales {
 	private boolean disponible;
 	
 	@Autowired
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch =FetchType.LAZY)
 	@JoinColumn(name = "EMPLEADOR_ID")
-	private Empleadores empleador;
+	private Empleadores empleador2;
 	
 	
 	public OfertasLaborales() {
@@ -148,10 +148,10 @@ public class OfertasLaborales {
 		this.disponible = disponible;
 	}
 	public Empleadores getEmpleador() {
-		return empleador;
+		return empleador2;
 	}
 	public void setEmpleador(Empleadores empleador) {
-		this.empleador = empleador;
+		this.empleador2 = empleador;
 	}
 	
 	
