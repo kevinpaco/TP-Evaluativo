@@ -10,18 +10,46 @@
        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">     
 </head>
  <body id="body2">
-       <div th:insert="/layouts/header :: header"> </div> <br>
-       <!--<div class="container1">
-       <div class="col-3" th:each="dato:${datos}" id="tarjeta">
+       <!--<div th:insert="/layouts/header :: header"> </div> <br>-->
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" th:each="dato:${empleador}">
+    <a class="navbar-brand" th:href="@{/ofertas/ofertar/}+${dato.id}">Crear Oferta Laboral</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav" >
+        <a class="nav-link active" aria-current="page" th:href="@{/empleador/mostrarEmp/}+${dato.id}">Mis Datos</a>
+        <a class="nav-link" th:href="@{/ofertas/misOfertas/}+${dato.id}">Mis Ofertas</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav>
+   
+     <div th:each="dato:${empleador}"> 
+       <h3 th:text="'Bienvenido Empleador: '+${dato.nombreComercial}"> hola</h3 ></div>  
+     <!--  <h5>Opciones: </h5>
+      
+      <nav class="navbar">
+  <form class="container-fluid justify-content-start">
+    <button class="btn btn-outline-success me-2" type="button">Crear Oferta de Trabajo</button>
+    <button class="btn btn-sm btn-outline-secondary me-2" type="button">Ver mis datos</button>
+    <button class="btn btn-sm btn-outline-secondary " type="button">Salir</button>
+  </form>
+</nav> </div>-->
+      <!-- <div class="container1">
+       <div class="col-3" th:each="dato:${empelador}" id="tarjeta">
          <div class="card" >
-            <p th:text="${dato.provincia}"> </p>
-            <p th:text="${dato.email}"> </p>
+            <p th:text="${dato.cuit}"> </p>
+            <p th:text="${dato.paginaWeb}"> </p>
             <p th:text="${dato.telefono}"> </p>
           
-             <h4>tarjetas</h4>-->
+             <h4>tarjetas</h4>
          </div>
        </div> 
-       </div>
+       </div>-->
        
 <body>
 </html>

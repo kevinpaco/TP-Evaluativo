@@ -1,5 +1,9 @@
 package ar.edu.unju.fi.pvisual.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -58,9 +62,15 @@ public class OfertasLaborales {
 	
 	@Autowired
 	@ManyToOne(fetch =FetchType.LAZY)
-	@JoinColumn(name = "EMPLEADOR_ID")
+	@JoinColumn(name = "empleador_id")
 	private Empleadores empleador2;
 	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 	
 	public OfertasLaborales() {
 		super();
@@ -152,6 +162,14 @@ public class OfertasLaborales {
 	}
 	public void setEmpleador(Empleadores empleador) {
 		this.empleador2 = empleador;
+	}
+	@Override
+	public String toString() {
+		return "OfertasLaborales [id=" + id + ", puestorequerido=" + puestorequerido + ", cantidadVacantes="
+				+ cantidadVacantes + ", resumenPuesto=" + resumenPuesto + ", disponHoraria=" + disponHoraria
+				+ ", principalesTareas=" + principalesTareas + ", datosContacto=" + datosContacto + ", Jornada="
+				+ Jornada + ", requisitos=" + requisitos + ", salario=" + salario + ", beneficios=" + beneficios
+				+ ", disponible=" + disponible + ", empleador2=" + empleador2 + "]";
 	}
 	
 	

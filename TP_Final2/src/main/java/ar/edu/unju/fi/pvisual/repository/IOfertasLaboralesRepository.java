@@ -1,6 +1,7 @@
 package ar.edu.unju.fi.pvisual.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -11,4 +12,6 @@ public interface IOfertasLaboralesRepository extends JpaRepository<OfertasLabora
 
 	@Query("from OfertasLaborales e order by e.puestorequerido")
 	public List<OfertasLaborales> obtenerOfertas();
+	
+	public Optional<OfertasLaborales> findById(Long id);
 }

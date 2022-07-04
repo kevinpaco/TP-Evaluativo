@@ -25,7 +25,7 @@ public class PrincipalController {
 	
 	@GetMapping("/principal")
 	public String getPrincipal(Model model) {
-	       model.addAttribute("datos", usuarioService.obtenerUsuarios());
+	       //model.addAttribute("datos", usuarioService.obtenerUsuarios());
 	
 		return "principal";
 	}   
